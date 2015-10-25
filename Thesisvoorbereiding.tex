@@ -1,0 +1,995 @@
+\documentclass[11pt]{article}
+\usepackage[english]{babel}
+\usepackage{amsmath, amssymb}
+\usepackage{braket}
+\usepackage[hang,flushmargin]{footmisc} 
+\renewcommand{\footnotemargin}{2em}
+\usepackage{bm}
+\numberwithin{equation}{section}
+\title{Probing short-distance phenomena in unstable nuclei with A(p,ppN) reactions - a feasibility study}
+\author{Andreas Waets}
+
+\begin{document}
+\maketitle
+\section{Inleiding}
+Algemene inleiding over het onderwerp, als leidraad de tekst van de thesisonderwerpen.
+\newpage
+\tableofcontents 
+\newpage
+\section{Botsingstheorie}
+Het begrijpen en kunnen beschrijven van atoomkernen brengt \'e\'en onoverkomelijke moeilijkheid met zich mee: omdat ze zo klein zijn kunnen we ze niet zomaar onder een microscoop leggen. We hebben andere, meer indirecte methoden nodig om ze te bestuderen. Een mogelijkheid is om te kijken naar geabsorbeerde en uitgestuurde straling bij overgangen tussen gebonden toestanden in de kern. De andere mogelijkheid is om te kijken naar botsingen waarbij deeltjes worden afgestuurd op atomen of atoomkernen. De manier waarop zij met mekaar reageren of meer bepaald op welke manier de verstrooide deeltjes uit de botsing komen. Op een gelijkaardige manier toonde Ernest Rutherford het bestaan van atoomkernen aan. (REF)\\
+\\
+Het bestuderen van botsingen is een ideale manier om de sterke, zwakke en elektromagnetische interacties in de kern te bepalen. De experimentele bevindingen moeten gefundeerd zijn op een theoretisch model dat ons toelaat om enerzijds voorspellingen te doen maar ook ervoor zorgt dat we specifieke eigenschappen van kernen kunnen achterhalen. Daarom is het noodzakelijk om deze theorie zorgvuldig op te bouwen: klassieke botsingstheorie maakt plaats voor kwantummechanische botsingstheorie waarin we enkel kunnen uitgaan van waarschijnlijkheden. We beschouwen een aantal assenstelsels waarin we de kinematica van de botsingen kunnen beschrijven, uiteindelijk maken we ook de overgang naar relativistische assenstelsels. De dynamica van de interacties zal volledig op kwantummechanica gebaseerd zijn. (SPLITSING KINEMATICA-DYNAMICA)
+
+\subsection{Soorten botsingen en botsingskanalen}\label{sec:Kanalen}
+1.2 in Joachain: Quantum Collision Theory\\
+(MAG  HELEMAAL VOORAAN)\\
+Botsingen of reacties kunnen gebeuren tussen elementaire deeltjes en samengestelde deeltjes. In de reacties die bij deze thesis bestudeerd worden bekijken we dus botsingen tussen samengestelde deeltjes (zowel de protonen als de kernen die onderzocht worden zijn samengesteld).
+
+Wanneer we typische verstrooiings- of botsingsexperimenten beschouwen zijn er een heel aantal dingen die mogelijk kunnen gebeuren. We kunnen te maken hebben met \emph{elastische botsingen} tussen twee deeltjes waarbij de interne structuur van de deeltjes niet gewijzigd wordt. In tegenstelling hiermee bestaan ook \emph{inelastische botsingen} waarbij \'e\'en of meerdere betrokken deeltjes door de botsing ge\"exciteerd wordt naar een nieuwe toestand. Tot slot zijn er de \emph{kernreacties} waarbij na de botsing twee of meerdere volledig nieuwe deeltjes gevormd worden. (UITBREIDING MET PICKUP, TRANSFER,...)\\
+\\
+Het is perfect denkbaar dat in \'e\'en experiment verschillende van de voorgaande mogelijkheden zich voordoen indien dit energetisch toegelaten is (EXTRA DEEL MET ENERGIE?). We zeggen dan dat er verschillende \emph{kanalen} mogelijk zijn waarbij verschillende deeltjes of ge\"exciteerde toestanden gecre\"eerd kunnen worden. Een voorbeeld is de botsing tussen twee protonen met een te lage energie om twee pionen te cre\"eren. De mogelijkheden zijn dan:
+
+\begin{align}
+\begin{split}
+p + p &\rightarrow p + p \\
+&\rightarrow p + p + \pi^0\\
+&\rightarrow p + n + \pi^+\\
+&\rightarrow d + \pi^+
+\end{split}
+\end{align}
+
+
+
+
+\subsection{Botsingsdoorsneden}\label{sec:Botsingsdoorsneden}
+
+(Referenties: Bransden, Joachain: Quantum Mechanics, Joachain: Quantum Collision Theory, Scherrer: Quantum Mechanics)\\
+\\
+
+
+Zoals reeds aangehaald kunnen we starten vanuit klassieke mechanica om botsingen te beschrijven. We beschouwen een ruimte gevuld met deeltjes (of \emph{targets}) en een bepaalde dichtheid $n$. De waarschijnlijkheid $P$ dat een inkomend deeltje een botsing ondergaat is evenredig met de afgelegde afstand $L$ en de dichtheid $n$:
+\begin{equation}
+	P = nL\sigma.
+\end{equation}
+Hierbij is $\sigma$ de \emph{totale botsingsdoorsnede} of werkzame doorsnede voor verstrooiing. Omdat een waarschijnlijkheid geen dimensie heeft moet de doorsnede de dimensies van een lengte$^2$ of oppervlakte hebben. Op klassiek niveau is de waarschijnlijkheid waarmee deeltjes botsen ook evenredig met de grootte van de deeltjes in het target (in afwezigheid van andere interacties tussen de deeltjes). De waarschijnlijkheid $P$ kan ook geschreven worden als verhouding tussen het aantal verstrooide deeltjes en het aantal inkomende deeltjes $N_s / N_i$. Op deze manier zien we eenvoudig de analogie met experimenten: een bundel inkomende deeltjes $N_i$ wordt afgestuurd op een target en een aantal verstrooide deeltjes $N_s$ wordt opgevangen door een detector. Hierdoor krijgen we
+\begin{equation}\label{ratio}
+	N_s = N_inL\sigma.
+\end{equation}
+Naast de totale doorsnede is het echter nog veel belangrijker om de \emph{differenti\"ele doorsnede} te kennen, dit geeft aan hoe groot de waarschijnlijkheid is dat deeltjes in een bepaalde richting worden verstrooid. Hiervoor kiezen we een sferisch assenstelsel met de polaire as in de richting van de inkomende deeltjes. Stel nu dat $dN_s$ het aantal verstrooide deeltjes in een kleine ruimtehoek $d\Omega$ met richting $\theta$ en $\phi$ is dan krijgen we 
+\begin{equation}
+	\frac{dN_s}{d\Omega} = N_i nL\frac{d\sigma}{d\Omega}
+\end{equation}
+met $d\Omega = sin\theta d\theta d\phi$. De differenti\"ele doorsnede geeft de waarschijnlijkheid dat een inkomend deeltje verstrooid wordt in de richting $ \theta , \phi$. (FIGUUR) De totale doorsnede kan hieruit berekend worden via
+\begin{equation}
+	\sigma = \int \left(\frac{d\sigma}{d\Omega} \right) d\Omega = \int_{0}^{2\pi} d\phi \int_{0}^{\pi} d\theta sin\theta \frac{d\sigma}{d\Omega} 
+\end{equation} 
+We kunnen deze definitie nog verder veralgemenen. In plaats van uit te gaan van $N_i$ en $N_s$, oftewel een vast aantal inkomende en verstrooide deeltjes, beschouwen we het aantal inkomende en verstrooide deeltjes per eenheid tijd $\mathcal{N}_i$ en $\mathcal{N}_s$. Hierdoor wordt \eqref{ratio} 
+\begin{equation}
+	\mathcal{N}_s = \Phi n \sigma
+\end{equation}
+met de flux $\Phi = \mathcal{N}_i v_i$ waarbij $v_i$ de snelheid van de inkomende deeltjes is en $n$ nog steeds de dichtheid van het target. De doorsnede wordt nu ook per eenheid tijd aangeduid. We beschouwen nu opnieuw het aantal verstrooide deeltjes per eenheid ruimtehoek per eenheid tijd:
+\begin{equation}
+	\frac{d\mathcal{N}_s}{d\Omega} = \mathcal{N}_i v_i n \frac{d\sigma}{d\Omega}
+\end{equation}
+Dit geeft
+\begin{equation}\label{invariant}
+	\frac{d\sigma}{d\Omega} = \frac{d\mathcal{N}_s/d\Omega}{\mathcal{N}_i v_i n}
+\end{equation}
+Uiteindelijk duiden we met $n_i = \mathcal{N}_i / V$ nog het aantal inkomende deeltjes per eenheid tijd per interactievolume $V$ aan. Nu defini\"eren we
+\begin{align}	
+N &\equiv \frac{1}{V}\frac{d\mathcal{N}_s}{d\Omega},\\
+F &\equiv n_i v_i n.
+\end{align}
+Zo wordt \eqref{invariant}
+\begin{equation}\label{N/F}
+	\frac{d\sigma}{d\Omega} = \frac{N}{F},
+\end{equation}
+oftewel is de differenti\"ele doorsnede de verhouding tussen $N$, het aantal verstrooide deeltjes met richting $ \theta , \phi$ per eenheid tijd per eenheid ruimtehoek, en $F$, het product van de flux van inkomende deeltjes en de dichtheid van de verstrooiers $n$. \\
+(MAG IN VOETNOOT)
+Waarom we de uitdrukking \eqref{N/F} net op deze manier willen schrijven zal duidelijk worden wanneer we Lorentz-invariantie van botsingsdoorsneden behandelen in \ref{sec:Lorentz-invariantie}.
+
+
+
+
+\section{Cross section kinematics}
+
+\subsection{Assenstelsels}\label{sec:Assenstelsels}
+Voor we kijken naar de effectieve interacties die zich voordoen bij botsingen en reacties gaan we verder in op de kinematica van doorsneden. We moeten een referentiestelsel kiezen waarin we de botsingen beschrijven. Twee voor de hand liggende keuzes voor assenstelsels zijn het laboratoriumstelsel en het Center-of-Mass of CM-stelsel. In het laboratoriumstelsel of lab frame bevinden de targets zich in rust voor de botsing. Dit is ook het stelsel waarin in het algemeen we observaties doen. Het CM-stelsel is echter veel eenvoudiger om berekeningen in te maken, dit stelsel beweegt mee met het massacentrum van de deeltjes. Daarom hebben we een manier nodig om deze twee aan mekaar te linken. \\ (MOGELIJK METEEN NAAR RELATIVISTISCH)\\
+De $z$-as wordt gekozen volgens de beweginsrichting van de inkomende deeltjes in beide assenstelsels. Het is duidelijk dat beide assenstelsels bewegen met een uniforme snelheid ten opzichte van mekaar:
+\begin{equation}\label{velocity}
+\mathbf{v}_L = \mathbf{v}_{CM} + \mathbf{v}_{rel}	
+\end{equation}
+ In het lab-stelsel heeft een deeltje met impuls \textbf{p} $=$ m\textbf{v} een kinetische energie gelijk aan $p^2/2m$. Aangezien de impuls van het target gelijk is aan nul is de kinetische energie in het lab-systeem
+\begin{equation*}
+K_L = \frac{p_i^2}{2m_i}	
+\end{equation*}
+met $p_i$ en $m_i$ de impuls en de massa van het inkomende deeltje. Uitgaande van \eqref{velocity} is de kinetische energie in het CM-stelsel 
+\begin{align}
+\begin{split}
+	K_{CM} &= K_L - \frac{p_L^2}{2M}\\
+	&= \frac{m_t}{m_i + m_t}K_L
+\end{split}
+\end{align}
+met het massacentrum voorgesteld als afzonderlijk deeltje met totale impuls $p_L$ en massa $M = m_i + m_t$.\\
+In het voorgaande werd aangenomen dat de relatieve snelheid tussen de twee assenstelsels niet-relativistisch was. Voor dit thesisonderwerp beschouwen we relativistische kinematica, de interagerende deeltjes bewegen ten opzichte van mekaar met relativistische snelheden. Hierdoor voeren we een Lorentz-transformatie uit om van het ene naar het andere assenstelsel over te gaan, meer bepaald een Lorentz-boost in de $z$-richting met snelheid $V_{rel}$:\\ \\
+\begin{equation}\label{Lorentz}
+\left\{ \begin{aligned}
+	x_L &= x\\
+	y_L &= y\\
+	z_L &= \gamma ( z + v_{rel}t)\\
+	t_L &= \gamma ( t + v_{rel}z)
+\end{aligned}
+\right.
+\end{equation}
+\\ \\
+met $\gamma = 1/ \sqrt{1-v_{rel}^2}$.
+Zoals eerder reeds aangehaald is het belangrijk om deze twee assenstelsels aan mekaar te linken. Hiertoe is het aangewezen om in berekeningen Lorentz-invariante grootheden te gebruiken, dit zijn grootheden die hetzelfde blijven wanneer een Lorentz-transformatie erop wordt toegepast. Aan de hand van figuur (FIGUUR 2.7 JOACHAIN) en \eqref{Lorentz} krijgen we indien $\textbf{v}$ en $\textbf{v}_{rel}$ parallel zijn
+\begin{equation}
+v_L = \frac{v_{CM} + v_{rel}}{1 + v_{rel}v_{CM}/c^2}
+\end{equation}
+en wat betreft de hoeken waarmee de deeltjes bewegen ten opzichte van mekaar:
+\begin{equation}
+\tan \theta_L = \frac{1}{\gamma} \frac{\sin \theta}{\cos \theta	+ v_{rel}/v_{CM}}.
+\end{equation}
+(VERDER AFWERKEN ALS WE SPECIFIEK DOORSNEDEN BESPREKEN OM TE WETEN WAAR WE NAARTOE WERKEN!!)
+
+
+
+
+\section{Cross section dynamics}
+In dit hoofdstuk gaan we dieper in op de dynamica van botsingen. Op welke manier wordt de doorsnede be\"invloedt door de interacties die plaatsvinden? Dit zullen we proberen te achterhalen met principes uit de kwantummechanica. Vertrekkend vanuit de absolute basis van potentiaalverstrooiing kunnen we uiteindelijk de $S$- en $T$-matrices opstellen die van cruciaal belang zullen zijn bij berekeningen.
+
+
+
+
+
+\subsection{Potentiaalverstrooiing}\label{Potential Scattering}
+Om te bepalen hoe het systeem dat we beschouwen evolueert, in dit geval een bundel deeltjes die invalt op een potentiaal, vertrekken we vanuit de Schr\"odingervergelijking:
+\begin{equation}\label{Schrodinger}
+	i\hbar \frac{d}{dt} \psi(\mathbf{r},t) =  \left[ - \frac{\hbar}{2m} \nabla^2 + V(\mathbf{r})\right] \psi(\mathbf{r},t)
+\end{equation}
+met m de massa van de inkomende deeltjes. Zowel hier als in experimenten volstaat het om de inkomende bundel te benaderen als vlakke golven. Hierbij kiezen we zoals steeds de $z$-as in de zin van de bundel dus is de golffunctie voor een inkomend deeltje gelijk aan
+\begin{equation}
+	\psi_i = e^{ikz}.
+\end{equation}
+met $k$ de golfvector van de inkomende golf, hierdoor is de impuls gelijk aan $p = \hbar k$.
+Algemeen wordt de golffunctie van een verstrooid deeltje voorgesteld door een sferische uitgaande golf met amplitude $f$ die afhangt van de richting $\theta$, $\phi$
+\begin{equation}
+\psi_{sc} = f(k, \theta, \phi)\frac{e^{ikr}	}{r}.
+\end{equation}
+De som van de inkomende en de verstrooide golf kunnen we bekijken als randvoorwaarde bij het oplossen van de Schr\"odingervergelijking ver weg van de potentiaal ($V(\mathbf{r}) \simeq 0$):
+\begin{equation}\label{boundary}
+\psi_k(\mathbf{r}) \underset{r \rightarrow \infty}\rightarrow e^{ikz}	+ f(k, \theta, \phi)\frac{e^{ikr}	}{r}.
+\end{equation}
+De beschouwde stationaire golffunctie laat toe om een waarschijnlijkheidsstroom te berekenen:
+\begin{equation}
+	\mathbf{j}(\mathbf{r}) = \frac{\hbar}{2mi} \left[ \psi^* ( \mathbf{\nabla}\psi ) - (\mathbf{\nabla}\psi^*) \psi \right]
+\end{equation}
+We negeren de termen in de gradi\"entoperator die zeer klein worden voor grote $r$, zo is
+\begin{equation}
+	j_r = \frac{\hbar k}{m} \frac{|f(k,\theta,\phi)|^2}{r^2}
+\end{equation}
+Het aantal deeltjes dat op de detector invalt per eenheid tijd is $Nd\Omega = j r^2 d\Omega$. Uit \eqref{N/F} weten we dat $Fd\sigma = Nd\Omega$ en $F = v_i$ dus 
+\begin{align}\label{amplitude}
+\begin{split}
+	\frac{d\sigma}{d\Omega} &= \frac{jr^2}{F}\\
+	&= \frac{\hbar k/ m}{\hbar k/ m}|f(k,\theta,\phi)|^2\\ 
+	&= |f(k,\theta,\phi)|^2 
+\end{split}
+\end{align}
+
+
+
+
+\subsection{Partial Waves}
+Solving the Schr\"odinger equation suffices to find the scattering amplitude $f$ and thus the cross section. To find such a solution we can restrict ourselves to a region far from the potential where $V \simeq 0$. We can write the incoming plane wave in the $z$-direction as a sum of spherical wave functions with different angular momenta:
+\begin{equation}\label{incoming}
+e^{ikz} = \underset{l,m} \sum  c_{lm} j_{l}(kr)Y^m_l(\theta, \phi),
+\end{equation}
+here the coefficients $c_{lm}$ represent constants in the expansion. The spherical Bessel functions have the property for $kr \ll l$
+\begin{equation}
+	j_l(kr) \propto (kr)^l.
+\end{equation}
+In this case all terms in the expansion are negligible in the vicinity of the potential except for $l = 0$. Setting $l, m = 0$, using the orthogonality of the spherical harmonics and writing out the Bessel function for $l = 0$ explicitly we find the incoming wave \eqref{incoming} to be
+\begin{equation}
+e^{ikz} = \frac{1}{2i}\left( \frac{e^{ikr}}{kr} - \frac{e^{-ikr}}{kr} \right)	+ \underset{l > 0} \sum terms.
+\end{equation}
+Since only the $l = 0$ part is affected by the potential we can write the scattered wave as a spherical outgoing wave with $l = 0$. Now we can write the total wave function (incoming + outgoing wave) as
+\begin{equation}
+	\psi_k(r) = \frac{1}{2i}\left(\eta_0 \frac{e^{ikr}}{kr} - \frac{e^{-ikr}}{kr} \right)
+\end{equation}
+with $\eta_0 = \exp(2i\delta_0)$. Here $\delta_0$ is called the \emph{s-wave shift} (since $l=0$), the effect of the scattering by the potential is simply a phase shift of the wave function. The quantity $\eta_0$ is (coincidentally) called an \emph{S-matrix element} which we will encounter later on. Pulling out the terms corresponding to the incident plane wave and expressing $\eta_0$ in terms of $\delta_0$ we get
+\begin{align}
+\begin{split}
+\frac{d\sigma}{d\Omega} &= |f(k,\theta, \phi)|^2	\\
+&=\frac{\sin^2\delta_0}{k^2}.
+\end{split}
+\end{align}
+
+
+
+
+\subsection{Integral representation of potential scattering}\label{sec:IntegralRep}
+Let us now rewrite the Schr\"odinger equation \eqref{Schrodinger} as an inhomogeneous (time independent) differential equation
+\begin{equation}\label{inhomogeneous}
+(\nabla^2 + k^2)\psi(\mathbf{r}) = U(\mathbf{r})\psi(\mathbf{r}).	
+\end{equation}
+Here the right hand side represents a source function.
+The standard procedure dictates we look for a homogeneous solution and a particular solution which compose the general solution. The homogeneous solution $\phi(\mathbf{r})$ can the easily be found to be
+\begin{equation}
+(\nabla^2 + k^2)\phi(\mathbf{r}) = 0
+\end{equation}
+Instead say we us a different approach: we decompose the problem by finding a function that defines the wave function $\psi$ at $\mathbf{r}$ by a point source at $\mathbf{r}'$. Such a function is called a \emph{Green's function} and obeys in this case
+\begin{equation}\label{Green's}
+(\nabla^2 + k^2)G(k,\mathbf{r},\mathbf{r}') = \delta(\mathbf{r}-\mathbf{r}').	
+\end{equation}
+ In a system governed by a linear differential equation like the Schr\"odinger equation we can construct $U(\mathbf{r})$ as a sum of point sources. But more importantly, the resulting wave function is the sum of all functions $G(\mathbf{r},\mathbf{r}')$ produced by the point sources at all points $\mathbf{r}'$. So we can write
+ \begin{equation}\label{Propagator}
+ 	\psi_k(\mathbf{r}) = \int  G(k,\mathbf{r},\mathbf{r'})U(\mathbf{r}')\psi_k(\mathbf{r}')d\mathbf{r}'.
+ \end{equation}
+ This expression will help us to physically understand what a Green's function actually does in the framework of potential scattering: The function can be said to take the piece of the source occupying the volume $d\mathbf{r}'$ at the point $\mathbf{r}'$ and propagates its effect to the point $\mathbf{r}$. The sum of the contributions of all $\mathbf{r}'$ superimpose to give the net effect at $\mathbf{r}$. The Green's function is then regarded as a \emph{propagator}. A propagator has the additional property that it should allow waves to travel forward in time, not backwards.\\ \\
+ At this point however, we face an annoying complication: The Green's function in \eqref{Propagator} is not uniquely defined. We can add any solution $\phi(\mathbf{r})$ of the homogeneous equation and it will still obey \eqref{Green's} but this will result in a different $\psi(\mathbf{r})$ when plugged into \eqref{Propagator}. What exact form of the Green's function to use will ultimately depend on the boundary conditions we impose on the differential equation. We will choose the general solution, written here as an integral equation
+ \begin{equation}\label{integral}
+\psi(\mathbf{r}) = \phi(\mathbf{r}) + \int	 G(k,\mathbf{r},\mathbf{r}')U(\mathbf{r}')\psi(\mathbf{r}')d\mathbf{r}'
+\end{equation}
+ in such a way it must satisfy the asymptotic boundary conditions of the stationary scattering wave function, as discussed in Section \ref{Potential Scattering}. Before we work out the exact expression we can visualize what this integral equation means for potential scattering, still regarding the Green's function as a propagator. The interpretation is in fact very simple: $\phi$ is an incoming wave, it is redirected by $U$ at $\mathbf{r}'$ and propagated by $G$ to $\mathbf{r}$ where we attempt to reconstruct the wave function.
+\\ \\ 
+Determining the exact form of the Green's function requires incorporating the boundary conditions for the total stationary scattering wave function. We see when acting with $\nabla^2 + k^2$ on \eqref{integral} and using \eqref{Green's} we get \eqref{inhomogeneous}. Now comparing \eqref{integral} with the boundary condition for the total wave function \eqref{boundary} we see that $\phi(\mathbf{r})$ is nothing but the incident plane wave $e^{i\mathbf{k}\cdot \mathbf{r}} = e^{ikz}$. We can then write the integral equation as
+\begin{equation}\label{integral2}
+\psi_k(\mathbf{r}) = e^{ikz} + \int	 G_0(k,\mathbf{r},\mathbf{r}')U(\mathbf{r}')\psi_k(\mathbf{r}')d\mathbf{r}'
+\end{equation}
+with $k$ indicating the wave vector of the incident plane wave. We used the notation $G_0$ here because the Green's function related to the unperturbed problem is defined by
+\begin{equation}
+[E-H^{0}]G_0(\mathbf{r},\mathbf{r}') = \delta(\mathbf{r}-\mathbf{r}')
+\end{equation}
+with $H^0$ the unperturbed Hamiltonian.
+Integrating the second term in the integral equation by using the Fourier representation
+\begin{equation}
+\delta(\mathbf{r}-\mathbf{r}') = \frac{1}{(2\pi)^3} \int e^{i\mathbf{k}'\cdot ~(\mathbf{r}-\mathbf{r}')}d\mathbf{k}'
+\end{equation}
+and rewriting $G_0$ as
+\begin{equation}
+G_0(k,\mathbf{r},\mathbf{r}')	= \int e^{i\mathbf{k}'\cdot ~\mathbf{r}} g_0(k',\mathbf{r},\mathbf{r}') d\mathbf{k}'.
+\end{equation} Substituting this in \eqref{Green's} we find
+\begin{equation}
+	g_0(k', \mathbf{r},\mathbf{r}') = \frac{e^{-i\mathbf{k}'\cdot \mathbf{r}}}{k'^2 - k^2}.
+\end{equation}
+Combining the previous expressions we find for $G_0$ the following expression:
+\begin{equation}
+G_0(k,\mathbf{r},\mathbf{r}')	= \int \frac{e^{i\mathbf{k}'\cdot ~(\mathbf{r}-\mathbf{r}')}}{k'^2 - k^2}  d\mathbf{k}'.
+\end{equation}
+We see immediately the integrand has poles at $k' = \pm k$ so we will need a way to avoid these singularities when integrating. Moreover we need to incorporate the boundary condition \eqref{boundary}. This means we need $G_0$ to be determined in such a way this expression leads to an outgoing spherical wave. Rewriting the integrand in terms of spherical coordinates, performing the angular integrations and subsequently choosing an appropriate integration path in the complex plane. Using Cauchy's integral theorem we arrive at
+\begin{equation}
+	G_0(k,\mathbf{r},\mathbf{r}')	= -\frac{1}{4\pi}\frac{e^{ik|\mathbf{r}-\mathbf{r}'|}}{|\mathbf{r}-\mathbf{r}'|}.
+\end{equation}
+We note that this expression indeed satisfies the required form of a spherical outgoing wave $\exp(ikr)/r$ for $r \rightarrow \infty$. So we can write \eqref{integral2}
+\begin{equation}\label{Lippman-Schwinger}
+	\psi_k(\mathbf{r}) = e^{ikz} -  \frac{1}{4\pi}\int	\frac{e^{ik|\mathbf{r}-\mathbf{r}'|}}{|\mathbf{r}-\mathbf{r}'|}  U(\mathbf{r}')\psi_k(\mathbf{r}')d\mathbf{r}'.
+\end{equation}
+This integral equation is known as the \emph{Lippman-Schwinger equation} of potential scattering. It incorporates the boundary condition via the Green's function into the Schr\"odinger equation \eqref{inhomogeneous}.\\
+\\
+We can look at the asymptotic behaviour of the wave function more closely by looking at the regime in which $r \rightarrow \infty$ and $r'$ finite (so $r' \ll r$). Here we have
+\begin{equation}
+	|\mathbf{r}-\mathbf{r}'| = \sqrt{r^2 - 2 \mathbf{r} \cdot \mathbf{r}' + r'^2} \underset{r \rightarrow \infty} \rightarrow r - \mathbf{\hat{r}} \cdot \mathbf{r}' + \frac{1}{2r}(\mathbf{\hat{r}} \times \mathbf{r}')^2 + \ldots 
+\end{equation}
+with $\mathbf{\hat{r}}$ the unit vector along $r$. Neglecting the terms of order $r^2$ (by assuming a finite range of the potential) we have
+\begin{equation}
+\frac{e^{ik|\mathbf{r}-\mathbf{r}'|}}{|\mathbf{r}-\mathbf{r}'|} \underset{r \rightarrow \infty} \rightarrow \frac{e^{ikr}}{r} e^{-i \mathbf{k}' \cdot \mathbf{r}}
+\end{equation}
+ where terms of higher order than $1/r$ have been neglected. In this expression we introduced $\mathbf{k}' = k\mathbf{\hat{r}}$ as the wave vector of the scattered particle with spherical polar coordinates $(k, \theta, \phi)$. This gives eventually for \eqref{Lippman-Schwinger} in the approximation $r \rightarrow \infty$
+ \begin{equation}
+ 	\psi_k(\mathbf{r}) \underset{r \rightarrow \infty} = e^{ikz} -  \frac{1}{4\pi}\frac{e^{ikr}}{r}\int	 e^{-i \mathbf{k}' \cdot \mathbf{r}'} U(\mathbf{r}')\psi_k(\mathbf{r}')d\mathbf{r}'.
+ \end{equation}
+ This expression (upon comparison with \eqref{boundary}) indeed exhibits the desired asymptotic behaviour. We even arrive at a more elaborate expression for the amplitude of the scattered wave:
+ \begin{align}
+ \begin{split}
+ f(k,\theta, \phi) &= 	- \frac{1}{4\pi}\int	 e^{-i \mathbf{k}' \cdot \mathbf{r}} U(\mathbf{r})\psi_k(\mathbf{r})d\mathbf{r}\\
+ & = - \frac{1}{4\pi} \bra{\phi_{k'}}U \ket{\psi_k}
+ \end{split}
+ \end{align}
+ where we have introduced $\phi_{k'} = \exp(i\mathbf{k}'\cdot \mathbf{r})$ as the outgoing plane wave. 
+This is called the \emph{integral representation of the scattering amplitude}. Note that this expression connects the total wave function of the system to the particle we detect at $r \rightarrow \infty$ by looking at the scattering amplitude, hereby we can already get a sense of a connection with real experiments.\\
+We can now use the exact form of the potential $V(\mathbf{r}) = \hbar^2/2m U(\mathbf{r})$ and write the scattering amplitude as
+\begin{equation}
+	f = -\frac{m}{2\pi \hbar^2}\bra{\phi_{k'}}V \ket{\psi_k}
+\end{equation}
+where the \emph{transition matrix element} $T_{k' k}$ is defined by
+\begin{equation}\label{transitionmatrixelement}
+	T_{k' k} = \bra{\phi_{k'}}V \ket{\psi_k}.
+\end{equation}
+Plugging this into the expression for the differential cross section \eqref{amplitude} and denoting the initial and final wave vectors by $i$ and $f$ gives
+\begin{equation}
+\frac{d\sigma}{d\Omega} = |f|^2 = \frac{m^2}{(2\pi)^2\hbar^4}	|T_{f i}|^2
+\end{equation}
+
+
+
+
+
+\subsection{Born series and the Born approximation}
+Instead of considering the approximation in the previous chapter we can now look at solving the integral equation \eqref{integral2} by means of an expansion. Our starting point will be the incident plane wave as 'zero-order' approximation and writing a sequence of integral functions as
+\begin{align}
+\begin{split}
+	\psi_0(\mathbf{r}) &= \phi_k(\mathbf{r}) = e^{i \mathbf{k \cdot r}}\\
+	\psi_1(\mathbf{r}) &= \phi_k(\mathbf{r}) + \int	 G_0(k,\mathbf{r},\mathbf{r}')U(\mathbf{r}')\psi_0(\mathbf{r}')d\mathbf{r}' \\
+	&~~\vdots\\
+	\psi_n(\mathbf{r}) & = \phi_k(\mathbf{r}) + \int	 G_0(k,\mathbf{r},\mathbf{r}')U(\mathbf{r}')\psi_{n-1}(\mathbf{r}')d\mathbf{r}'.
+\end{split}
+\end{align}
+Assuming the sequence converges towards the exact wave function $\psi_k$ we can write the wave function's \emph{Born Series} as 
+\begin{align}
+\begin{split}
+	\psi_k(\mathbf{r}) = \phi_k(\mathbf{r}) &+ \int G_0(k,\mathbf{r},\mathbf{r}')U(\mathbf{r}')\phi_k(\mathbf{r}')d\mathbf{r}'\\
+	&+ \int G_0(k,\mathbf{r},\mathbf{r}')U(\mathbf{r}')G_0(k,\mathbf{r}',\mathbf{r}'')U(\mathbf{r}'')\phi_k(\mathbf{r}")d\mathbf{r}'d\mathbf{r}''\\
+	& + \ldots ~.
+\end{split}
+\end{align}
+Recalling the picture of Green's functions representing \emph{propagators} we see the expressions on the second and following lines represent multiple 'redirections' of the wave by the potential $U$.
+Written in the integral representation from before we get
+\begin{equation}
+	f = -\frac{1}{4 \pi}\bra{\phi_{k'}}U + UG_0U + UG_0UG_0U + \ldots \ket{\psi_k}.
+\end{equation}
+The first term in this approximation is called the \emph{(first) Born approximation to the scattering amplitude}. Let us now study this approximation more closely. The amplitude is given by
+\begin{align}
+\begin{split}
+f &= -\frac{1}{4\pi} \int e^{i \mathbf{k}' \cdot \mathbf{r}	} U(\mathbf{r}) e^{i \mathbf{k} \cdot \mathbf{r}	}d\mathbf{r}\\
+&= -\frac{1}{4\pi} \int e^{i \mathbf{\Delta \cdot r}}U(\mathbf{r})d\mathbf{r}
+\end{split}
+\end{align}
+where we have introduced the wave vector transfer $\mathbf{\Delta} = \mathbf{k} - \mathbf{k}'$ with corresponding momentum transfer equal to $\hbar\Delta$. This last expression shows that the scattering amplitude is proportional to the Fourier transform of the potential corresponding to the wave vector transfer during the collision. Hence the momentum transfer in a collision plays an important role in determining the scattering amplitude. Assuming real potentials we can only have elastic scattering. In this case $|\mathbf{k}| = |\mathbf{k}'| = k$ and the magnitude of the vector is given by
+\begin{equation}
+\Delta = 2k\sin\frac{\theta}{2}.	
+\end{equation}
+
+
+
+
+\subsection{The Collision Matrix}
+This section deals with further elaborating the matrix elements we introduced in section \ref{sec:IntegralRep}. In what way can we connect a beam of free particles in the remote past (which in between interacts with a target) to the scattered particles which  are recorded by the detectors in the far future? At this point we really enter the dynamics of collisions which forces us to choose a certain picture that allows us to study the quantum systems of interest. From the infinite number of pictures we will not choose the familiar Schr\"odinger or Heisenberg picture but instead the so-called \emph{interaction picture}. This is actually an intermediate of the Schr\"odinger and Heisenberg pictures.\\
+
+
+
+
+\subsubsection{The interaction picture}\label{sec:interactionpicture}
+In the interaction picture we split the Hamiltonian in an unperturbed part $H_0$ and a perturbation $V$:
+\begin{equation}
+	H_S = H_0 + V
+\end{equation}
+with the eigenstates of $H_0$ the free unperturbed solutions $\phi_\alpha$ such that
+\begin{equation}
+	H_0 \phi_\alpha = E_\alpha\phi_\alpha.
+\end{equation}
+We now want to separate the free motion from the motion of the total system by performing a unitary transformation on the (time-evolving) Schr\"odinger state vector $\psi_S(t)$:
+\begin{equation}
+	\psi(t) = e^{iH_0(t-t_0)}\psi_S(t).
+\end{equation}
+The time development in the Schr\"odinger picture is given by
+\begin{equation}
+i\hbar \frac{\partial}{\partial t}\psi_S(t) = H_S\psi_S(t)
+\end{equation}
+so this gives for the interaction picture state vector the \emph{Tomonaga-Schwinger} equation:
+\begin{equation}
+	i \frac{\partial\psi(t)}{\partial t} = V(t)\psi(t)
+\end{equation}
+with $V(t) = e^{iH_0(t-t_0)}Ve^{-iH_0(t-t_0)}$. This shows us that the state vector is time dependent as in the Schr\"odinger picture but this dependence is entirely due to the interaction. The observables are represented by operators whose equations of motion are determined by the unperturbed part of the Hamiltonian $H_0$:
+\begin{equation}
+i \frac{dA(t)}{dt} = [A, H_0] + i \frac{\partial A}{\partial t}	
+\end{equation}
+with $A(t) = e^{iH_0(t-t_0)}A_Se^{-iH_0(t-t_0)}$. Hence the operators evolve in time as in the Heisenberg picture but without the interaction. This way we have completely separated the kinematical evolution of observables and the dynamical evolution of state vectors. This separation is particularly convenient for studying collision phenomena.\\
+We can now define an evolution operator in the interaction picture:
+\begin{equation}
+\psi(t) = U(t,t')\psi(t')	
+\end{equation}
+with group properties $U(t,t) = 1$, $U(t,t') = U(t,t'')U(t'',t')$ and $U^{-1}(t,t') = U(t',t)$. Using the Tomonaga-Schwinger equation (which is valid for all $t'$) we find
+\begin{equation}
+	i \frac{\partial}{\partial t} U(t,t') = V(t)U(t,t').
+\end{equation}
+We can also simply show that $U_c$ is a unitary operator.
+Using the same line of thought as with the integral representation of potential scattering we can also write the previous expression as an integral equation:
+ \begin{equation}\label{evolutionintegral}
+ 	U(t,t') = I - i \int^t_{t'} V(t_1)U(t_1,t')dt_1
+ \end{equation}
+ with $U(t,t) = I$ as initial condition. Just like the development of the Born series, we can try to solve this equation by iteration. Starting from the zero order approximation $U^{(0)} (t,t') = I$, the first order approximation becomes
+ \begin{equation}
+ 	U^{(1)}(t,t') = I - i\int^t_{t'} V(t_1)dt_1,
+ \end{equation}
+similarly to second order in V
+\begin{equation}
+	U^{(2)}(t,t') = I - i\int^t_{t'} V(t_1)dt_1 + (-i)^2\int^t_{t'}dt_1\int^{t_1}_{t'}dt_2 V(t_1)V(t_2).
+\end{equation}
+Now we assume the series indeed converges to the evolution operator $U$ so we can write
+\begin{equation}
+	U(t,t') = \underset{n=0}{\overset{\infty}{\sum}} U_n (t,t')
+\end{equation}
+with $U^{(0)} (t,t') = I$ and for $n \geq 1$
+\begin{equation}
+	U_n(t,t') = (-i)^n\int_{t'}^t dt_1 \int_{t'}^{t1}dt_2 \ldots \int_{t'}^{t_{n-1}}dt_n V(t_1) V(t_2) \ldots V(t_n). 
+\end{equation}
+This is \emph{Dyson's perturbation expansion for the evolution operator}. Since in general the operators $V(t_i)$ do not commute we need to impose the ordering $t' \leq t_n \leq \ldots \leq t_1 \leq t$ for $t'<t$. This is done by introducing the chronological ordering operator $P$ such that
+\begin{equation}
+	P[A(t_1)B(t_2)] = \begin{cases} A(t_1)B(t_2) &\mbox{if} \quad t_1 > t_2\\ B(t_2)A(t_1) &\mbox{if} \quad t_2 > t_1 \end{cases}.
+\end{equation}
+Integrating for the evolution operator using the operator $P$ gives the expression 
+\begin{equation}
+	U_n(t,t') = I + \underset{n=1}{\overset{\infty}\sum}\frac{(-i)^n}{n!}\int_{t'}^t dt_1 \int_{t'}^{t}dt_2 \ldots \int_{t'}^{t}dt_n P[V(t_1) V(t_2) \ldots V(t_n)].
+\end{equation}
+Applying the operator $P$ and writing the expression in the correct time ordering is often called the \emph{reduction to normal form}.\\
+\\
+With the interaction picture and its time evolution operator in mind we are able to look at collisions. In experiments we will need to consider \emph{arrangement channels} (as in section \ref{sec:Kanalen}). For the theoretical derivations in this section we will assume mostly only one arrangement channel is allowed unless stated otherwise but the discussions made using this simplification are representative to illustrate the general picture. As an example we can consider the elastic positron-hydrogen collision
+\begin{equation}
+	e^+ + H \rightarrow e^+ + H.
+\end{equation}
+As discussed we will use the interaction picture to describe collisions, this means the total Hamiltonian of the system
+\begin{equation}
+H = K_{e^+} + K_p + K_{e^-} + V_{pe^-} + V_{e^+ p} + V_{e^+ e^-}	
+\end{equation}
+will be split into an unperturbed or free part $H_0 = K_{e^+} + K_p + K_{e^-} + V_{pe^-}$ and an interaction part $V = V_{e^+ p} + V_{e^+ e^-}$  together forming the decomposed Hamiltonian $H_S =  H_0 + V$. In general, if a decomposition $H = H_c + V_c$ exist for a particular arrangement channel $c$ there exists an evolution operator $U_c(t,t')$ for this Hamiltonian. We will denote the states in this arrangement channel in the asymptotic region by $\phi_n$. We will also use $\phi_a$ and $\phi_b$ to denote the initial and final states in the asymptotic regime. In our experiment we can look at the initial states as being prepared in the remote past in a certain arrangement channel $(t' \rightarrow -\infty)$ and the final states  recorded by our detector in the far future $(t \rightarrow +\infty)$ (in the same or another channel). 
+\newpage 
+\noindent
+Therefore it is essential to examine the limit of the evolution operator for infinite arguments. We define the four operator
+\footnote{
+Here we used the limiting procedure by Gell-Mann and Goldberger. This is defined by
+\begin{equation*}
+\underset{t \rightarrow - \infty} \lim	F(t) = \underset{\epsilon \rightarrow 0^+}\lim \int^0_{-\infty} e^{\epsilon t'} F(t')dt'
+\end{equation*}
+and
+\begin{equation*}
+\underset{t \rightarrow + \infty} \lim	F(t) = \underset{\epsilon \rightarrow 0^+}\lim \int_0^{+\infty} e^{-\epsilon t'} F(t')dt'.
+\end{equation*}
+Performing integration by parts on these equations we see that if $F(t)$ has proper limits at $t = \pm \infty$, taking the limit $t = \pm \infty$ and finally letting $\epsilon \rightarrow 0^+$ we have
+\begin{equation*}
+	\underset{t \rightarrow - \infty} \lim	F(t) = F(-\infty) \quad \mbox{and} \quad \underset{t \rightarrow + \infty} \lim F(t) =	F(+\infty).
+\end{equation*}
+If $F(t)$ oscillates at large $|t|$ the oscillations will be damped by the exponential factors.
+}
+
+
+
+
+
+\begin{align}\label{defOperators}
+\begin{split}
+	U_c(t,-\infty) &\equiv \underset{\epsilon \rightarrow 0^+} \lim \quad\epsilon \int^0_{-\infty} e^{\epsilon t'} U_c(t,t')dt'\\
+	U_c(t,+\infty) &\equiv \underset{\epsilon \rightarrow 0^+} \lim \quad\epsilon \int_0^{+\infty} e^{-\epsilon t'} U_c(t,t')dt'\\
+	U_c(-\infty,t) &\equiv \underset{\epsilon \rightarrow 0^+} \lim \quad\epsilon \int^0_{-\infty} e^{\epsilon t'} U_c(t',t)dt'\\
+	U_c(+\infty,t) &\equiv \underset{\epsilon \rightarrow 0^+} \lim \quad\epsilon \int_0^{+\infty} e^{-\epsilon t'} U_c(t',t)dt'\\
+\end{split}
+\end{align}
+These operators satisfy the same integral equation as \eqref{evolutionintegral}. We also have the properties
+\begin{equation}
+U_c^{\dagger} (t,\pm \infty	) = U_c(\pm \infty,t) \quad \mbox{and} \quad U_c^{\dagger} (\pm \infty,t ) = U_c(t,\pm \infty).
+\end{equation}
+ Considering a single arrangement channel and decomposition $H = H_0 + V$. Defining the M\o ller operators
+\begin{equation}
+	\Omega^{(\pm)} \equiv U(0,\mp \infty) \quad \mbox{and} \quad  \Omega^{(\pm)\dagger} \equiv U(\mp \infty, 0)
+\end{equation}
+we see these operators convert an eigenstate $\phi_{\alpha}$ of the reference problem governed by $H_0$ to an eigenstate $\psi_{\alpha}$ of the full Hamiltonian at $t = 0$:
+\begin{equation}\label{conversion}
+\ket{\psi^{(\pm)}_\alpha} = 	\Omega^{(\pm)} \ket{\phi_{\alpha}} \quad\mbox{and} \quad \bra{\psi^{(\pm)}_\alpha} = 	 \bra{\phi_{\alpha}}\Omega^{(\pm) \dagger}.
+\end{equation}
+From this we can deduce that
+\begin{equation}
+	\Omega^{(\pm)} = \underset{\alpha} \sum \ket{\psi^{(\pm)}_\alpha} \bra{\phi_{\alpha}}.
+\end{equation}
+Assuming the total Hamiltonian is time independent we can set $U_c(t,t') = e^{iH_ct}e^{-iH(t-t')}e^{-iH_ct}$. Inferring we have a complete set of reference states $\phi_{\alpha}$, using the definitions \eqref{defOperators} we can eventually make the connection between the total states and the reference states clear
+\begin{equation}
+\psi^{(\pm)} = \underset{\epsilon \rightarrow 0^+} \lim \frac{\pm ie}{E_{\alpha} - H \pm ie}\phi_{\alpha}
+\end{equation}
+We learn from simple calculations the M\o ller operators are unitary only if the full Hamiltonian $H$ and the reference Hamiltonian $H_0$ have no bound states. This stands in contrast with the unitarity of the evolution operators for finite times.\\
+Generalizing all this to Hamiltonians which we can split into different arrangement channels we can calculate the total that develop from (or into) different arrangement channels are orthogonal to one another. Since $H_c \phi_n = E_n \phi_n$ and $H = H_c + V_c$ we can write generally for an arrangement channel
+\begin{equation}
+	\psi^{(\pm)}_n = \phi_n + \underset{\epsilon \rightarrow 0^+} \lim \frac{1}{E_{n} - H \pm ie} V_c \phi_{n}
+\end{equation}
+and in particular for the initial and final arrangement channels
+\begin{align}\label{initialfinal}
+\begin{split}
+	\psi^{(\pm)}_a &= \phi_a + \underset{\epsilon \rightarrow 0^+} \lim \frac{1}{E_{a} - H \pm ie} V_i \phi_{a}\\
+	\psi^{(\pm)}_b &= \phi_b + \underset{\epsilon \rightarrow 0^+} \lim \frac{1}{E_{b} - H \pm ie} V_f \phi_{b}.\\
+\end{split}
+\end{align}
+
+
+
+
+
+\subsubsection{The $S$- and $T$- matrices}\label{sec:SandT}
+Now we are ready to define the so-called \emph{S-matrix} which relates the state vectors in the remote past $(t' \rightarrow - \infty)$ and the far future $(t \rightarrow \infty)$. We define the collision operator $S$ as the composition of two M\o ller operators
+\begin{equation}
+	S = U(+\infty, 0)U(0, -\infty) = \Omega^{(-) \dagger}\Omega^{(+)}.
+\end{equation}
+We assume tis operator acts on the asymptotic free reference eigenstates $\phi_{\alpha}$ of $H_0$ \footnote{
+We can also define an operator $S' = \Omega^{(+)}\Omega^{(-) \dagger}$. In this case the operator $S'$ acts on the scattering states $\psi^{(\pm)}_{\alpha}$ but the results it yields are the same as the ones computed by acting with $S$ on the corresponding reference states $\phi_{\alpha}$.
+
+}
+. Denoting two of these states $\alpha$ and $\beta$ we obtain the $S$-matrix elements
+\begin{align}\label{S-matrixelement}
+\begin{split}	
+\bra{\beta} S \ket{\alpha} &= \bra{\phi_{\beta}} S \ket{\phi_{\alpha}} \\
+&=  \bra{\phi_{\beta}} \Omega^{(-) \dagger}\Omega^{(+)}\ket{\phi_{\alpha}}\\
+&= 	\braket{\psi^{(-)}_{\beta} |\psi^{(+)}_{\alpha}}.
+\end{split}
+\end{align}
+The $S$-matrix element $\bra{\beta} S \ket{\alpha}$ represents the (time independent) probability amplitude of finding the system described by the interaction picture state $\psi^{(+)}_{\alpha}$ into the state $\psi^{(-)}_{\beta}$. In other words the $\psi^{(+)}_{\alpha}$ states originates from the asymptotic free state $\phi_{\alpha}$ while the $\psi^{(-)}_{\beta}$ transforms into $\phi_{\beta}$. Referring more explicitly to the initial $(i)$ and final $(f)$ channels the operator $S_{fi}$ evaluates the matrix element between the asymptotic states which are eigenstates of respectively the initial and final channel Hamiltonians. A more explicit expression for can be achieved starting from \eqref{S-matrixelement}
+\begin{equation}
+	\bra{b} S \ket{a} = \braket{\psi^{(-)}_b | \psi^{(+)}_a} = \braket{\psi^{(+)}_b | \psi^{(+)}_a} + \braket{\psi^{(-)}_b - \psi^{(+)}_b| \psi^{(+)}_a}.
+\end{equation}
+Using the orthogonality between solutions coming from different arrangement channels and \eqref{initialfinal}
+\begin{align}
+\begin{split}
+	\bra{b} S \ket{a} &= \delta_{ba} + \underset{\epsilon \rightarrow 0^+}\lim \bra{\phi_b} V_f \left(\frac{1}{E_b - H + i\epsilon} -  \frac{1}{E_b - H - i\epsilon}\right) \ket{\psi^{(+)}_a}\\
+	&= \delta_{ba} + \underset{\epsilon \rightarrow 0^+}\lim \frac{2i\epsilon}{(E_b-E_a)^2 + \epsilon^2} \bra{\phi_b}V_f\ket{\psi^{(+)}_a}.
+\end{split}
+\end{align}
+This expression obviously becomes infinite for $E_a = E_b$ and it vanishes for $E_a \neq E_b$. This means we can modify this equation to
+\begin{equation}
+	\bra{b} S \ket{a} = \delta_{ba} + 2\pi i \delta(E_a-E_b) \bra{\phi_b}V_f\ket{\psi^{(+)}_a}.
+\end{equation}
+In a similar way we get
+\begin{equation}\label{Smatrix1}
+	\bra{b} S \ket{a} = \delta_{ba} + 2\pi i \delta(E_a-E_b) \bra{\psi^{(-)}_b }V_i\ket{\phi_a}.
+\end{equation}
+This means that if the transition is \emph{on-shell} ($E_a = E_b$) we have
+\begin{equation}\label{Smatrix2}
+	\bra{\phi_b}V_f\ket{\psi^{(+)}_a} = \bra{\psi^{(-)}_b }V_i\ket{\phi_a}.
+\end{equation}
+Note we can already get a glimpse of similar expressions as in section \ref{sec:IntegralRep} on the discussion of the transition matrix elements, this we will try to really put in delicate now by defining the \emph{transition operator} as
+\begin{equation}
+	\mathcal{T}_{fi}(E) = V_i + V_f\frac{1}{E-H + i\epsilon}V_i.
+\end{equation}
+Using \eqref{Smatrix1} and \eqref{Smatrix2} and the assumption we remain on-shell it can be shown that
+\begin{equation}
+	\bra{b} \mathcal{T} \ket{a} = \bra{\phi_b}V_f\ket{\psi^{(+)}_a} = \bra{\psi^{(-)}_b }V_i\ket{\phi_a}.
+\end{equation}
+This means the $S$-matrix elements can be written as
+\begin{equation}
+	\bra{b} S \ket{a} = \delta_{ba} + 2\pi i \delta(E_a-E_b)\bra{b} \mathcal{T} \ket{a} .
+\end{equation}
+Hence the $T$-matrix elements constitute the "non-trivial" part of the $S$-matrix elements. For practical considerations concerning actually calculating cross sections we can also account for conservation of (linear) momentum. Denoting by $\boldsymbol{P}$ the momentum operator and by $\boldsymbol{P_a}$ and $\boldsymbol{P_b}$ the momentum of the initial and final asymptotic states we can write
+\begin{equation}
+	\bra{b} S \ket{a} = \delta_{ba} + 2\pi i \delta(E_a-E_b)\delta(\boldsymbol{P_a}-\boldsymbol{P_b})T_{ba} 
+\end{equation}
+where the reduced $T$-matrix element is now defined on the energy shell. Using the interaction picture and the formalism of $S$- and $T$- matrices we made \eqref{transitionmatrixelement} explicit.
+
+
+
+
+
+
+\subsection{Transition probabilities and cross sections}\label{sec:Probabilities and Cross sections}
+The general transition probability corresponding to the transition $a \rightarrow b$ is
+\begin{equation}
+	\underset{\substack{t' \rightarrow - \infty \\ t \rightarrow + \infty}} \lim W_{ba}(t,t') = |\bra{b}S \ket{a}|^2
+\end{equation}
+with as before $a$ corresponding to the initial and $b$ to the final channel. The relevant physical quantity to be determined is the transition probability per unit time given by
+\begin{equation}
+w_{ba} = \frac{d}{dt}| \bra{\phi_b} U_f(t,0) \ket{\psi^{(+)}_a}|^2.	
+\end{equation}
+Using the derivations from \ref{sec:SandT} we find this to be
+\begin{equation}
+	w_{ba} = 2 \operatorname{Im}\bra{b} \mathcal{T} \ket{a} \delta_{ba} + 2\pi \delta(E_a-E_b)|\bra{b} \mathcal{T} \ket{a}|^2.
+\end{equation}
+Considering a group of final states $\phi_b$ having almost the same energy as the initial state $\phi_a$ and assuming $\phi_a$ does not belong to it means the first term drops out. Introducing the density of final states $\rho(E)$ this becomes
+\begin{equation}
+	w = 2\pi \underset{b'} \sum \rho_{b'}(E)|\bra{b} \mathcal{T} \ket{a}|^2
+\end{equation}
+where the summation includes the final states we want to consider, the $T$-matrix element is calculated on shell. Writing out this matrix element explicitly and using $\rho_{b'}(E) = \underset{b}\sum \delta(E_{b'} - E_b)$ we get
+\begin{equation}
+	w = 2 \pi \underset{\mathbf{b}} \sum \delta(E_b-E_a)\delta(\mathbf{P_b} - \mathbf{P_b})^2 |T_{ba}|^2.
+\end{equation}
+Noting that $\delta(\mathbf{P_b} - \mathbf{P_b})^2=\delta(\mathbf{0})\delta(\mathbf{P_b} - \mathbf{P_b})$ and enclosing our system in a large box of volume $V$ gives
+\begin{equation}
+	w = 2 \pi \underset{\mathbf{b}} \sum \delta(E_b-E_a)\delta(\mathbf{P_b} - \mathbf{P_b}) |T_{ba}|^2.
+\end{equation}
+This expression represents the number of particles scattered into the states $\phi_b$ per unit time per unit particle, assuming one incident particle to be present in the volume $V$. Considering now the relative incident flux of particles $\phi$ and an infinitesimal range of final states we can write $d\sigma = w/\phi$ becoming\begin{equation}
+	d\sigma = \underset{\mathbf{b}} \sum \delta(E_b-E_a)\delta(\mathbf{P_b} - \mathbf{P_b}) \frac{2\pi}{v_i}|T_{ba}|^2
+\end{equation}
+with $v_i$ the relative initial velocity and the index $b$ ranging over all states we want to consider\footnote{Note that in the continuous limit we can write
+\begin{equation}
+	\underset{\mathbf{p}}\sum \rightarrow \frac{V}{(2\pi)^3} \int d^3 p.
+\end{equation}
+The different normalization factors become very important when calculating cross sections for specific processes.}
+ (limited by e.g. experimental resolution or certain arrangement channels). We can specify the summation over final states even further since every distinct final particle has a wave vector $\mathbf{k}$ and internal quantum numbers $\alpha$. This gives
+\begin{equation}\label{crosssection}
+	d\sigma = \underset{\alpha_1, \alpha_2, \ldots \alpha_n} \sum \int d\mathbf{k}_1 d\mathbf{k}_2 \ldots d\mathbf{k}_n \delta(E_b-E_a)\delta(\mathbf{P_b} - \mathbf{P_b}) \frac{2\pi}{v_i}|T_{ba}|^2
+\end{equation}
+with the \emph{phase space element} of $n$ particles in the final state equal to $d\mathbf{k}_1 d\mathbf{k}_2 \ldots d\mathbf{k}_n$.\\
+Now we come back to the reason why we wrote the differential cross section in \ref{sec:Botsingsdoorsneden} like
+\begin{equation}
+\frac{d\sigma}{d\Omega} = \frac{N}{F}	
+\end{equation}
+with $N = (1/V)/(d\mathcal{N}_s/d\Omega)$ and $F = n_i v_i n$. The reason is very simple: we want our cross section to be \emph{invariant under all proper Lorentz transformations}. Since $N$ is simply a number per unit four-volume it will be invariant under Lorentz-transformations. For $n_i$ the length contraction for a Lorentz-transformation becomes (with $c = 1$)
+\begin{equation}
+	n_i = \frac{n_i^0}{\sqrt{1-v_i}}
+\end{equation}
+with $v_i$ the relative initial velocity in the lab frame. This gives
+\begin{equation}
+	F = \frac{n_i^0}{\sqrt{1-v_i}}v_i n^0
+\end{equation}
+since the velocity of the target particles is zero in this case.
+Let us now look at the quantity $F$ when observed from another frame which moves at a collinear velocity $\mathbf{u}$ with respect to the original frame (the target then has velocity $-\mathbf{u}$ in the new frame). We get
+\begin{align}
+\begin{split}
+	F' &= n_i'n'(v_i' + u)\\
+	&= \frac{n_i^0 n^0(v_i' + u)}{\sqrt{1-{v_i'}^2}\sqrt{1-u^2}}\\
+	&=  \frac{n_i^0}{\sqrt{1-v_i}}v_i n^0 = F.
+\end{split}
+\end{align}
+so $F$ is Lorentz invariant for transformations parallel to the axis of the collision. This we can generalize to the point where the cross section will be invariant under all proper Lorentz-transformations. With $v_i$ still in the lab frame and $\hbar = c = 1$
+\begin{equation}
+	v_i = \frac{|\mathbf{k}_i|}{E_i} \quad \mbox{and} \quad n_i = \frac{n_i^0}{\sqrt{1-v_i}} = \frac{n_i^0 E_i^0}{m_i}.
+\end{equation}
+and since $F = n_i v_i n$ we get
+\begin{equation}
+	F = n_i^0n^0 \frac{|\mathbf{k}_i|}{m_i}.
+\end{equation}
+Using the triangle function $\lambda(x,y,z) = (x-y-z)^2-4yz$ and the fact that the magnitude of the wave vector of an incident particle in the lab frame is given by $|\mathbf{k}_i| = \sqrt{\lambda(s,m_i^2,m_t^2)}$ with $s^2 = (p_i + p_t)^2$ we can write $F$ in a Lorentz invariant way as
+\begin{equation}
+	F = \frac{n_i^0n_t^0\sqrt{\lambda(s,m_i^2,m_t^2)}}{2m_im_t}.
+\end{equation}
+We now denote the quantity $d\mathbf{k}/E$ as the \emph{Lorentz invariant phase space} and introducing these quantities in \eqref{crosssection} gives
+\begin{align}\label{finaldifferential}
+\begin{split}	
+	d\sigma = \underset{\alpha_1, \alpha_2, \ldots \alpha_n} \sum \int \frac{d\mathbf{k}_1}{E_1} \frac{d\mathbf{k}_2}{E_2} \ldots &\frac{d\mathbf{k}_n}{E_n} \delta(E_b-E_a)\delta(\mathbf{P_b} - \mathbf{P_b}) \\&\times \frac{(2\pi)^4}{E_iE_tv_i}|\sqrt{E_1E_2 \ldots E_n}T_{ba}\sqrt{E_iE_t}|^2
+\end{split}
+\end{align}
+where we factored out $E_iE_t$ and now we call $E_iE_tv_i$ the \emph{flux factor} and is equal to $\sqrt{\lambda(s,m_i^2,m_t^2)}$ or 
+\begin{equation}
+E_iE_tv_i = 4\sqrt{(p_i \cdot p_t)^2 - m_i^2m_t^2}.	
+\end{equation}
+Since $d\sigma$, all factors $d\mathbf{k}_i/E_i$ and the delta functions are Lorentz invariants we can infer that
+\begin{equation}
+	\mathcal{M}_{ba} = \sqrt{E_1E_2 \ldots E_n}T_{ba}\sqrt{E_iE_t}
+\end{equation}
+is also Lorentz invariant. Equation \eqref{finaldifferential} gives combines all ingredients to begin calculating actual cross sections. Note that all dynamical effects is contained within $|\mathcal{M}_{ba}|^2$ and all kinematical effects within the phase space integrals. This way the phase space yields a "background" correction to the actual reaction.
+
+
+
+
+
+\section{Knockout reactions}
+At this point we developed all necessary ingredients to start looking at specific types of reactions. All further physical or mathematical calculations or assumptions can be attributed to the nature of the reactions under study. In this chapter we will investigate $(p,pN)$ reactions ($N$ being a proton or neutron) and $(e,e'p)$ reactions.
+
+\subsection{(p,pN) reactions}
+(AFBEELDING THESIS PANIN)\\
+\\
+This thesis will focus on so-called \emph{quasi-free} $(p,pN)$ scattering reactions. This means the incident proton energy will generally be sufficiently large to assure the proton only interacts with the soon to be knocked-out nucleon, the other nucleons in the target nucleus are simply 'spectators' or interact in a minor fashion. The strength of this method lies in determining single particle-states in nuclei of interest. 
+
+\subsection{Plane Wave Impulse Approximation}
+Looking at the figure below we can infer that (in the lab frame where the target $A$ is ar rest) $\mathbf{p}_2 = \mathbf{p}_1 - \mathbf{q}$ and $\mathbf{p}_{N_2} = \mathbf{q} + \mathbf{p}_{N_1}$ (with $p_1 (p_2)$ denoting the initial (final) proton's momentum, $q$ the internal transferred momentum, $p_{N_1} (p_{N_2})$ the bound (scattered) nucleon $N$'s momentum). Using global momentum conservation $\mathbf{p} = \mathbf{p}_2 + \mathbf{p}_{N_2} + \mathbf{p}_{A-1}$ gives eventually
+\begin{equation}
+	\mathbf{p}_{A-1} = \mathbf{p}_1 - \mathbf{p}_2 - \mathbf{p}_{N_2} = - \mathbf{p}_{N_1}
+\end{equation}
+so we can conclude the recoil momentum of the nucleus $A-1$ is directly related to the internal momentum of the nucleon. An important quantity in these kinds of scattering experiments is the \emph{missing momentum (or energy)}, it is the difference between the initial momentum in the system and the final momentum. It is therefore a measure of the momentum transferred to the nucleus and can be related to single particle properties. In our quasi-free assumption we do not allow the incident proton to undergo multiple collisions and thus multiple momentum of energy transfers. We will come back to this later when discussing corrections to the different approximations.\\
+\\
+The most general (averaged) cross section for $(p,pN)$ reactions is given by
+\begin{equation}
+	\frac{d\sigma}{dE_p' d\Omega_p ' d\Omega_N} = \frac{K}{(2s_p + 1)(2J_A + 1)}\underset{\gamma}\sum |T_{p,pN}(\gamma)|^2,
+\end{equation}
+with $E_p'$ the energy of the scattered proton, $d\Omega_p'$ and $d\Omega_N$ the spatial angles of the scattered proton and knocked-out nucleon respectively and $K$ the kinematic factor. We also averaged over the initial spins (randomly distributed over the possible states $(2s_p + 1)(2J_A + 1)$ of the incident proton and nucleus\footnote{In general an averaged amplitude is denoted by a bar so for correctness we should actually always write
+\begin{equation}
+	|\overline{\mathcal{M}}|^2 = \frac{1}{\prod_i (2 s_i + 1)} |\mathcal{M}|^2
+\end{equation}  .}. The summation $(\gamma)$ of the matrix elements is taken over spin components $(m_{s_1},m_{s_2},m_N, M_A,M_B)$. The key to determining this cross section of course lies in the determination of the transition amplitude  $|T_{p,pN}(\gamma)|^2$. We can use different approximations to determine what this amplitude looks like. A possibility is to use the \emph{Plane Wave Impulse Approximation} (PWIA), in this case the particles at the interaction point are approximated as plane waves and we divide the interaction into the hard scattering of the incident proton with the struck nucleon and the soft interaction with the recoil nucleus. The construction of this matrix element is the easiest using second quantization\footnote{ Writing for the initial and final states and denoting the recoil nucleus $A-1$ as $B$ and the knocked out nucleon with $N$
+\begin{align}
+\begin{split}
+	&\ket{i} = \hat{a}^{\dagger}_{c,\mathbf{p}_1,m_{s_1},m_{t_1}}\ket{\alpha_A, J_AM_A^J, T_A M_A^T},\\
+	&\ket{f} = \hat{a}^{\dagger}_{c,\mathbf{p}_2,m_{s_2},m_{t_2}}\hat{a}^{\dagger}_{c,\mathbf{p}_N,m_{s_N},m_{t_N}} \ket{\beta_B,J_BM_B^J, T_B M_B^T}\text{\footnotemark} .
+\end{split}
+\end{align}
+\footnotetext{Dickhoff \& Van Neck: Many Body-theory exposed! uitleg over kernen opgevuld tot fermi-niveau}
+\noindent
+Using Clebsch-Gordan coefficients we can write the state vector of the nucleus $A$ also as
+\begin{align}
+\begin{split}
+	\ket{\alpha_A, J_A M_A^J, T_A M_A^T} =  \underset{J'T'}\sum ~\underset{m, {M^J_B}'}\sum & \underset{m_T, {M^T_B}'}\sum \braket{J_A M_A^J | jmJ_B {M_B^J}'}\braket{T_A M_A^T | tm_TT_B {M_B^T}'}\\
+	& \times \hat{a}^{\dagger}_{b,jlm,tm_t}\ket{\alpha_B, J_B{M_B^J}', T_B {M_B^T}'}.
+\end{split}
+\end{align}
+This equation has an important physical implication: it represents the total angular momentum state of $A$ composed of the total angular momentum of one nucleon and the total angular momentum of a $B$ (so the residual $A-1$ nucleus). }
+so the matrix element $T_{fi}$ is given by $\braket{f | \hat{O}_{pn} | i}$. We assume the operator acting between the proton and the struck nucleon is a two-body operator 
+\begin{equation}
+	\hat{O} = \frac{1}{4} \underset{\alpha\beta\delta\gamma}\sum \braket{\alpha, \beta | O | \delta \gamma}a_{\alpha}^{\dagger}a_{\beta}^{\dagger}a_{\delta}a_{\gamma}
+\end{equation} Reducing the expectation value in normal form (as discussed in \ref{sec:interactionpicture}) means applying Wick's theorem in such a way we only make contractions that account for the annihilation of the incident proton and the creation of a scattered proton and knocked-out nucleon, these will be the only contractions that contribute to the amplitude. This gives
+\begin{align}
+\begin{split}
+	T_{p,pN}^{(PWIA)} = \sqrt{S(lj)}& \underset{m}  \sum  \braket{J_AM_A^J | j m J_B M^J_B} \\
+	 &\times \braket{\mathbf{p}_2,m_{s_2},m_{t_2} ; \mathbf{p}_N, m_{s_N}, m_{t_N} | O_{pn} | \mathbf{p}_1, m_{s_1},m_{t_1} ; jlm,t m_t}
+\end{split}
+\end{align}
+where we introduced the spectroscopic factor $\sqrt{S(lj)}$\footnote{
+\begin{equation}
+	\sqrt{S(lj)}\delta_{J,J'}\delta_{T,T'}\delta_{M_B^J,{M_B^J}'}\delta_{M_B^T,{M_B^T}'} = \braket{\beta_B,J_BM_B^J, T_B M_B^T | \alpha_B, J_B{M_B^J}', T_B {M_B^T}'}.
+\end{equation}.}. These spectroscopic factors denote the nuclear structure information. They contain the information on the actual model of the nucleus under consideration. In terms of stripping and pick up reactions for an independent particle model we can write using second quantization
+\begin{align}
+\begin{split}
+\braket{A + 1 | a^{\dagger}_{A+1} | A} = 1, \qquad &\qquad  \braket{A + 1 | a^{\dagger}_{\neq A+1} | A} = 0,\\
+\braket{A - 1 | a_{A-1} | A} = 1, \qquad &\qquad  \braket{A - 1 | a_{\neq A-1} | A} = 0
+\end{split}  
+\end{align}
+with the usual creation and annihilation operators and ground states equal with $A-1$, $A$, $A+1$. The expectation values of the operator $a^{\dagger}$ and $a$ give the spectroscopic amplitudes for these reactions. When correlations are included, the spectroscopic amplitudes depart from their 0 or 1 values. The knowledge of the spectroscopic factors make it possible to learn about the structure of the mean field and the role of correlations.\\ Now we can switch back to writing everything in configuration space. Using a completeness relation for the missing momentum operator we can write
+\begin{equation}
+	T_{p,pN}^{(PWIA)} = \sqrt{S(lj)}\tau_{p,pN}(\mathbf{k}_{pN}',\mathbf{k}_{pN}, E) \int d^3\mathbf{r}e^{-i\mathbf{q}\cdot \mathbf{r}}\psi_{jlm}(\mathbf{r})
+\end{equation}
+where we can clearly see the integral represents the Fourier transform of the single particle wave function for the bound nucleon. Taking into account plane wave normalisation $V=2\pi^3$ and the Lorentz invariant flux factor (with relative velocity $v_i$) $E_i E_A v_i = \sqrt{(p_1 \cdot p_A)- m_1^2 m_A^2}$ we can write the cross section as
+\begin{equation}
+	d\sigma = \overline{\underset{i}\sum} \underset{f} \sum |M_{fi}|^2 \frac{(2\pi)^4}{E_1E_Av_i} \delta^{(4)}(p_1 + p_A -p_2 -p_N - p_B) \frac{\mathbf{p}_2}{E}\frac{\mathbf{p}_N}{E}\frac{\mathbf{p}_B}{E}
+\end{equation}
+with $\mathcal{M}_{fi} = \sqrt{E_1 E_A} T_{fi} \sqrt{E_2 E_N E_B}$ and the summations imply averaging over initial spins and summation over final spins. We can even rewrite the delta function representing momentum conservation as
+\small
+\begin{equation}
+	\delta^{(4)}(p_1 + p_A -p_2 -p_N - p_B) = \delta^{(3)}(\mathbf{p}_1 + \mathbf{p}_A - \mathbf{p}_2 - \mathbf{p}_N - \mathbf{p}_B)\delta(E_1 + E_A - E_2 - E_N - E_B)
+\end{equation}
+\normalsize
+The PWIA is ofcourse not appropriate to model realistic physical processes regarding collisions of nuclei. For this we need to take into account more elaborate corrections like for example the Distorted Wave Approximation.
+
+\subsection{Distorted Wave Approximation}
+In the DWIA we take into account wave distortion by the different particles caused by the presence of a nuclear potential. To put things in delicate, we can now write the transition amplitude as
+\begin{equation}\label{CrossSectionDWIA}
+	T_{p,pN} = \sqrt{S(lj)} \braket{ \chi_{\mathbf{k}^{(-)}_p} \chi_{\mathbf{k}^{(-)}_N} | \tau_{pN} | \chi_{\mathbf{k}^{(+)}_p}}
+\end{equation}
+with
+\begin{equation}
+	\chi_i(\mathbf{r})^{(\pm)} = S_{(\pm)}(b) e^{i\mathbf{k}_i^{(\pm)} \cdot \mathbf{r}}.
+\end{equation}
+Here $S_{(\pm)}$ are called the \emph{survival amplitudes} for incoming and outgoing waves. They measure the distortion and absorption of the incoming proton and outgoing nucleons as a function of their position in space. They are given by
+\begin{equation}
+	S_{(\pm)}(b) = \exp \left[ -\frac{i}{\hbar v} \int^{b_{\pm}}_{a_{\pm}} dz' U_i^{\pm} (\mathbf{r}')\right]
+\end{equation}
+with $v$ the velocity of nucleon $i$ and $U_i$ stands for the optical potential accounting for all interactions of the particle with the nucleus. This optical potential will provide a measure of nuclear properties like the nucleon density. Using theoretical models that calculate this optical potential we can do simulations to compare experiments with. At moderately high energies ($ E_p \sim 200$ MeV) we can take into account multiple scattering events in the forward path of the incoming proton. This approximation is called the \emph{Relativistic Multiple Scattering Glauber Approximation} (RMSGA). Now we return to (\ref{CrossSectionDWIA}) which allows a simple interpretation of the transition matrix for the scattering of a high energy projectile by a proton in a (p,pN) reaction. The two-body wavefunction of the incoming proton-nucleus channel is
+\begin{equation}
+	\psi_{(+)} = S_{(+)}e^{i \alpha \mathbf{k}_p \cdot \mathbf{r}}\psi_{jlm} 
+\end{equation}
+with $\alpha = (A-1)/A$ a correction factor to account for the center of mass motion. The survival amplitude (or scattering matrix) $S_{(+)}$ represents the probability of the incoming proton reaching the collision point. Analogously, the two-body wavefunction for the outgoing channel is given by
+\begin{equation}
+	\psi_{(-)} = S_{(-)}^{(p)}S_{(-)}^{(N)} e^{i(\mathbf{k}_N + \mathbf{k}_{p}')\cdot \mathbf{r}}
+\end{equation}
+with survival amplitudes for the scattered proton and nucleon. They account for the distortion and absorption of the outgoing channels. Still, the main energy transfer occurring during the quasi-free (p,pN) scattering. In an independent particle model we can write $\braket{\psi_f | \psi_i} \approx \braket{\psi_{(-)} | \psi_A}$. Apart from kinematical factors, the total scattering amplitude is the product of the free nucleon-nucleon scattering amplitude times the probability amplitude for finding inside the nucleus a nucleon with wavefunction $\psi_{jlm}$ at position $\mathbf{r}$. This way we can write the transition matrix as
+\begin{equation}
+	T_{p,pN} = \sqrt{S(lj)} \tau_{p,pN}(\mathbf{k}_{pN}',\mathbf{k}_{pN}, E) \int d^3 \mathbf{r} e^{-i \mathbf{Q} \cdot \mathbf{r}} S(b,\theta) \psi_{jlm}(\mathbf{r})
+\end{equation}
+with $\mathbf{Q} = \mathbf{k}_p' + \mathbf{k}_N - \alpha \mathbf{k}_p$ with $\theta$ a function of the angles $\theta_p'$ and $\theta_N$, $S(b,\theta)$ is the product of scattering matrices for pA, p′B and NB scattering. The differential cross section in DWIA is then eventually given by
+\begin{align}
+\begin{split}
+	\left(\frac{d\sigma}{d^3Q}\right)_{DWIA} &= \frac{1}{(2\pi)^3} \frac{S(lj)}{2j+1} \underset{m} \sum \Bigg\langle \frac{d\sigma_{pN}}{d\Omega}\Bigg\rangle_Q\\
+	& \times \Big | \int d^3 \mathbf{r} e^{-i \mathbf{Q}\cdot \mathbf{r}} \braket{S(b)}_Q \psi_{jlm}(\mathbf{r})\Big |^2 
+\end{split}
+\end{align}
+where we averaged over $d\sigma_{pN}/d\Omega$ and the sum takes care of the average over all magnetic substates of the bound-state wavefunction $\psi_{jlm}$. Here the S-matrix is also averaged over all pp' scattering angles leading to the same magnitude of the momentum transfer $Q$.
+
+\section{Approximations}
+
+\subsection{The Eikonal Approximation}
+The relatively simple ''hard'' nucleon-nucleon scattering (as used in the quasielastic scattering approximation) is obscured by so-called ''soft''  initial and final interactions or IFSI in short. Concerning the hard nucleon-nucleon scattering, we can us the factorization approach that allows this nucleon-nucleon scattering part to enter in the differential cross section in a multiplicative way. The inclusion of spin-dependence in the description of IFSI, however, does not allow this kind of factorization (why?). In that situation, an alternative technique can be used: the amplitude factorized form of the cross section. In this approach, the two-body NN interaction can be approximated by the interpolation of phase shifts from free elastic NN scattering.\\
+The IFSI can be computed using the DWIA approximation. Optical potentials used in this approximation are gained by fitting elastic nucleon-nucleus scattering data. We want our framework to apply not only to relatively low incident proton energies of several hundreds of MeV but also to the GeV regime. This means we need to do a partial wave expansion of the exact solution to the scattering problem and include higher relative angular momenta. This can become difficult in a hurry for high energies because the number of partial waves needed to reach convergence increases rapidly with energy.
+\\\\
+An alternative to this is the \emph{eikonal approximation}. This is a high-energy semi-classical method and was developed from optics. When the De Broglie wavelength $\lambda = h/p$, with $h$ Planck's constant and $p$ the momentum of the initial particle, is small compared to the distance in which the potential varies sufficiently we can use a semi-classical approach \cite{Joachain75}.\\ 
+\\
+We consider the nonrelativistic scattering of a spinless particle of mass $m$ by a potential $V(\mathbf{r})$ with a characteristic range $a$ and $V_0$ the typical strength of the potential. Then $U(\mathbf{r}) = 2mV(\mathbf{r})/\hbar^2$ is the reduced potential with corresponding strength $U_0$. The short-wavelength condition then reads
+\begin{equation}
+	ka \gg 1 
+\end{equation}
+with $k$ the wavenumber of the incoming particle.
+ The stationary scattering wave function $\psi_k(\mathbf{r})$, composed of an incoming plane wave and exhibiting the behaviour of an outgoing spherical wave satisfies the Lippman-Schwinger equation \eqref{Lippman-Schwinger}
+
+\begin{equation}
+	\psi_k(\mathbf{r}) = e^{i \mathbf{k}\cdot \mathbf{r}} + \int G_0(\mathbf{r},\mathbf{r}')U(\mathbf{r}')\psi_k(\mathbf{r}')d\mathbf{r}'
+\end{equation}
+with $k$ the wave number of the incident plane wave and the Green's function in wave vector space written as
+\begin{equation}
+	G_0(\mathbf{r},\mathbf{r}') = - (2\pi)^{-3} \underset{\epsilon \rightarrow 0^+} \lim \int d\mathbf{k}' \frac{e^{i \mathbf{k}' (\mathbf{r}-\mathbf{r}')}}{k'^2 - k^2 - i\epsilon}.
+\end{equation}
+The previous equations readily give the correct asymptotic behaviour
+\begin{equation}\label{AsymptoticBehaviour}
+\psi_k(\mathbf{r}) \underset{\mathbf{r} \rightarrow \infty} = \frac{1}{(2\pi)^{3/2}} \left( e^{i \mathbf{k}\cdot \mathbf{r}} + f(\theta, \phi) \frac{e^{ikr}}{r}\right)	
+\end{equation}
+In our high-energy approximation, the potential varies slowly with respect to the scale of the incident wavelength. In other words, we assume that if the rapid oscillation of the incident wave is removed, the remainder of the wave function does not oscillate much \cite{Suzuki03}. This allows us  to factor out the free incident plane wave from the stationary scattering wave function and write
+\begin{equation}\label{ansatz}
+	\psi_k(\mathbf{r}) = \frac{1}{(2\pi)^{3/2}}e^{i\mathbf{k}\cdot \mathbf{r}}\phi(\mathbf{r}).
+\end{equation}
+Plugging this assumption and the Green's function into the Lippman-Schwinger equation gives \footnote{From now on we imply taking the limit $\epsilon \rightarrow 0^+$ in all steps.}
+\begin{equation}
+	\phi(\mathbf{r}) = 1 - \frac{1}{(2\pi)^{3}}\int d\mathbf{R} \int d\mathbf{k}' \frac{e^{i(\mathbf{k}' - \mathbf{k}) \cdot \mathbf{R}}}{k'^2 - k^2 - i\epsilon} U(\mathbf{r} - \mathbf{R})\phi(\mathbf{r} - \mathbf{R})
+\end{equation}
+where we have set $\mathbf{R} = \mathbf{r} - \mathbf{r}'$. To easily derive an approximate form for $\phi(\mathbf{r})$ we introduce a new variable $\mathbf{p} = \mathbf{k}' - \mathbf{k}$ which modifies the form of the Green's function to a kind of Fourier transform of $U\phi$ and get
+\begin{equation} \label{SlowVaryingIntegral}
+	\phi(\mathbf{r}) = 1 - \frac{1}{(2\pi)^3}\int d\mathbf{R} \int d\mathbf{p} \frac{e^{i\mathbf{p} \cdot \mathbf{R}}}{2 \mathbf{k}\cdot \mathbf{p} + p^2 - i\epsilon} U(\mathbf{r} - \mathbf{R})\phi(\mathbf{r} - \mathbf{R})
+\end{equation}
+ The reason why we redefined $\phi(\mathbf{r})$ and consequently the Lippman-Schwinger equation is now clear: the product $U\phi$ appearing in the momentum space integral varies slowly on the scale of the incident wavelength. Hence, the largest contributions to the integral come from small $p/k$ values, giving us the opportunity to expand the denominator of the Green's function in \eqref{SlowVaryingIntegral} in terms of $p/k$. We fix the incident wavevector along the $z$-axis which gives
+ \begin{align}
+ 	\frac{1}{2 \mathbf{k}\cdot \mathbf{p} + p^2 - i\epsilon} &= \frac{1}{2 k p_z + p^2 - i\epsilon}\\
+ 	&= \frac{1}{2 k p_z  - i\epsilon} - \frac{1}{(2 k p_z - i\epsilon)^2}p^2 + \ldots ~.
+ \end{align}
+ Choosing this specific direction will prove to be very important to our approximation as we will show further on.
+ Taking only the first (linear) term in the expansion into account we can now write for the Green's function
+ \begin{equation}
+	G^{(1)}_0(\mathbf{R}) = -\frac{e^{(i\mathbf{k}\cdot \mathbf{R})}}{(2\pi)^3} \int d \mathbf{p} \frac{e^{i\mathbf{p}\cdot \mathbf{R}}}{2k p_z - i\epsilon}.
+ \end{equation}
+When evaluated, the second term in the expansion will result in an expression of order $U_0/k^2$. The short-wavelength condition $ka \gg 1$ (or equivalently: $|V_0|/E \ll 1$) ensures the second term is small in comparison to the first term. In light of this we also have to require $U_0/k^2 \ll 1$ and this requirement will determine the validity of the eikonal approximation.
+  We examine the $\mathbf{p}$ integral in the above expression by switching to Cartesian coordinates
+ \begin{align}
+ 	\int d \mathbf{p} \frac{e^{i\mathbf{p}\cdot \mathbf{R}}}{2k p_z - i\epsilon} &= \int^{+ \infty}_{- \infty} dp_x ~e^{ip_x X}\int^{+ \infty}_{- \infty} dp_y ~e^{ip_y Y}\int^{+ \infty}_{- \infty} dp_z \frac{e^{ip_z Z}}{2k p_z - i\epsilon}\\
+ 	& = (2\pi)^2 \delta(X) \delta(Y) \frac{1}{2k} \int^{+ \infty}_{- \infty}dp_z \frac{e^{ip_z Z}}{2k p_z - i\epsilon}
+ \end{align}
+ where we used the integral representation of the Dirac delta function. The integral over $p_z$ can be performed in the complex plane \footnote{Appendix with complex integrals!!}. Closing the contour in both hemispheres renders the following expression
+ \begin{equation}
+ 	G^{(1)}_0(\mathbf{R}) = 
+ 	\begin{cases}
+ 		- \frac{ie^{i\mathbf{k}\cdot \mathbf{R}}}{2k}e^{ikZ}\delta(X)\delta(Y) & \text{if } Z > 0,\\
+ 		0 &\text{if } Z < 0.\\
+ 		\end{cases}
+\end{equation}
+We can now return to our original variables and introduce the step function to express the two values of the Green's function in a more elegant way
+\begin{equation}
+	G^{(1)}_0(\mathbf{r},\mathbf{r}') = - \frac{ie^{i\mathbf{k}\cdot \mathbf{R}}}{2k} e^{ik(z-z')}\delta(x-x')\delta(y-y')\Theta(z-z').
+\end{equation}
+This expression forms a cornerstone in formulating the eikonal approximation: as we can clearly see from this expression, the delta functions fix the propagator to the $z$-axis and the step function ensures there is only purely forward motion. Using this linearized propagator simplifies the expression \eqref{SlowVaryingIntegral} when we evaluate the integrals
+\begin{equation}
+	\phi^{(1)} (x,y,z) = 1 - \frac{i}{2k} \int^{z}_{-\infty} U(x,y,z')\phi^{(1)}(x,y,z')dz'
+\end{equation}
+where again the superscript $(1)$ denotes we only use the first term in our expansion and we have switched to the variable $z' = z-Z$. Recalling the series expansion of the exponential function we can write
+\begin{equation}
+	\phi^{(1)} (x,y,z) = e^{-\frac{i}{2k} \int^{z}_{-\infty} U(x,y,z')dz'}.
+\end{equation}
+We can notice that $\phi^{(1)}$ varies negligibly over distances of order $k^{-1}$ since $U_0/k^2$ is small. Thus for distances which are large compared to $k^{-1}$ the product $U\phi^{(1)}$ also varies slowly. Hence the important values of $p$ in \eqref{SlowVaryingIntegral} are small compared to $k$, justifying the expansion in powers of $p/k$. Now we can return to our ansatz \eqref{ansatz} and obtain the \emph{eikonal wave function}
+\begin{equation}
+	\psi_E(\mathbf{r}) = \frac{1}{(2\pi)^{3/2}} e^{i\left(\mathbf{k}\cdot \mathbf{r} - \frac{1}{2k}\int^{z}_{-\infty} U(x,y,z')dz'\right)}
+\end{equation}
+or in terms of the potential $V(\mathbf{r}) = \hbar^2U(\mathbf{r}) / 2m$
+\begin{equation}
+	\psi_E(\mathbf{r}) = \frac{1}{(2\pi)^{3/2}} e^{i\left(\mathbf{k}\cdot \mathbf{r} - \frac{1}{\hbar v}\int^{z}_{-\infty} V(x,y,z')dz'\right)}
+\end{equation}
+with $v = \hbar k /m$ the magnitude of the incident velocity. The eikonal approximation simply results in a phase shift of the incident plane wave.\\
+We do need to admit the eikonal wave function does not exhibit the correct asymptotic behaviour \eqref{AsymptoticBehaviour} for $\mathbf{r} \rightarrow \infty$. However, since we will use the integral representation to calculate the scattering amplitude we only need to know the scattering wave function where the potential is non-vanishing, thus only here the modulating function $\phi$ modifies the incident plane wave.\\
+\\
+Now the eikonal wave function can be used to calculate scattering amplitudes. The eikonal scattering amplitude is given by
+\begin{align}
+f_E &= -\frac{1}{4\pi}\bra{\phi_{k'}}U \ket{\psi_E}\\	
+& = -\frac{1}{4\pi}\int d\mathbf{r} ~e^{-i\mathbf{k}' \cdot \mathbf{r}} U(\mathbf{r}) e^{i\left(\mathbf{k}\cdot \mathbf{r} - \frac{1}{2k}\int^{z}_{-\infty} U(x,y,z')dz'\right)}
+\end{align}
+with $\phi_{k'} = e^{-i\mathbf{k}'\cdot\mathbf{r}}$ the outgoing plane wave. Denoting with $\mathbf{q} = \mathbf{k} - \mathbf{k}'$ the wave vector transfer we can write
+\begin{equation}\label{EikonalAmplitude}
+	f_E = -\frac{1}{4\pi}\int d\mathbf{r} ~e^{i\mathbf{q} \cdot \mathbf{r}} U(\mathbf{r}) e^{- \frac{i}{2k}\int^{z}_{-\infty} U(x,y,z')dz'}
+\end{equation}
+We can intuitively understand why the (linearized) $z'$ integration results in a loss of accuracy: since the approximation is semi-classical we should be evaluating this expression along the actual curved classical trajectory. A possible concession to this is to perform the integration along a direction $\mathbf{\hat{n}}$, parallel to the bisector of the scattering angle $\theta$ and perpendicular to the vector $\mathbf{q}$. To simplify we adopt a cylindrical coordinate system \cite{Canto13} with $\mathbf{r} = \lbrace b,z,\varphi\rbrace$ and decompose the vector $\mathbf{r}$ as
+\begin{equation}\label{cylindrical}
+	\mathbf{r} = \mathbf{b} + z\mathbf{\hat{n}}.
+\end{equation}
+Now $\mathbf{b}$ is an 'impact parameter' vector corresponding to the projection of $\mathbf{r}$ on the $xy$-plane, it is perpendicular to $\mathbf{\hat{n}}$ and subtends an azimuthal angle $\varphi$ within the range $(0,2\pi)$. Accordingly the volume element is
+\begin{equation}
+	d\mathbf{r} = bdbdzd\varphi
+\end{equation} 
+The $z$ component of $\mathbf{r}$ lies along $\mathbf{\hat{n}}$. When dealing with impact parameters it is only logical we integrate in terms of surface elements $d^2\mathbf{b} = bdbd\varphi$. This way we can write \eqref{EikonalAmplitude} as
+\begin{equation}
+	f_E = -\frac{1}{4\pi}\int d^2\mathbf{b} \int^{+\infty}_{-\infty} dz ~e^{i\mathbf{q}\cdot\mathbf{b}}U(\mathbf{b},z)e^{-\frac{i}{2k}\int^z_{-\infty} U(\mathbf{b},z')dz'}
+\end{equation}
+since $\mathbf{q}\cdot\mathbf{r} = \mathbf{q}\cdot\mathbf{b}$. The integration over the $z$ variable is now pretty straightforward: we change variables to
+\begin{equation}
+	z \rightarrow w = -\frac{i}{2k}\int^z_{-\infty} U(\mathbf{b},z')dz' \quad \text{with} \quad dz = \frac{2k}{iU(\mathbf{b},z)}dw.
+\end{equation}
+The integral now takes the form
+\begin{equation}
+	f_E = -\frac{ik}{2\pi} \int d^2\mathbf{b} e^{i\mathbf{q}\cdot \mathbf{b}} \int^{i\chi(k,\mathbf{b})}_0 dw ~e^w
+\end{equation}
+where we introduced the \emph{eikonal phase shift function}
+\begin{equation}
+	\chi(k,\mathbf{b}) =  -\frac{1}{2k}\int^{+\infty}_{-\infty} U(\mathbf{b},z)dz.
+\end{equation}
+Performing the $w$ integral yields the eikonal scattering amplitude
+\begin{equation}
+	f_E = \frac{ik}{2\pi} \int d^2\mathbf{b} ~e^{i\mathbf{q}\cdot \mathbf{b}} \lbrack e^{i\chi(k,\mathbf{b})} - 1\rbrack.
+\end{equation}\\
+\\
+A final remark can be made on the angular validity of the eikonal approximation. Suppose we perform the $z'$ integration along the original direction $\mathbf{\hat{k}}_i$. For small scattering angles the vector $\mathbf{q}$ will be almost perpendicular to $\mathbf{k}_i$ so we can construct our cylindrical coordinate system with
+\begin{equation}
+	\mathbf{r} = \mathbf{b} + z\mathbf{\hat{k}}_i.
+\end{equation}
+We can expand the quantity $\mathbf{q}\cdot \mathbf{r}$ for small angles to
+\begin{equation}
+	\mathbf{q}\cdot \mathbf{r} = \mathbf{q}\cdot (\mathbf{b} + z\mathbf{\hat{k}}_i) = \mathbf{q}\cdot \mathbf{b} + kz(1-\cos\theta) \simeq \mathbf{q}\cdot \mathbf{b}
+\end{equation}
+where we have neglected the terms of order $\theta^2 kz \lesssim \theta^2 ka$. Consequently a qualitative angular validity criterion is given by $\theta \ll (ka)^{-1/2}$ \emph{using this coordinate system}. It is not unreasonable to expect that the choice of coordinate system as in \eqref{cylindrical} will lead to an improved angular domain of validity.
+\begin{thebibliography}{10}
+
+\bibitem{Joachain75}
+C. J. Joachain,
+\emph{Quantum Collision Theory},
+North Holland Publishing Company,
+1975
+.
+
+\bibitem{Suzuki03}
+Y. Suzuki, K. Yabana, R. G. Lovas, K. Varga,
+\emph{Structure and Reactions of Light Exotic Nuclei}
+CRC Press,
+2003.
+
+\bibitem{Byron73}
+F. W. Byron, C. J. Joachain, E. H. Mund,
+\emph{Potential scattering in the eikonal approximation},
+Physical Review D, Vol. 8,
+1973.
+
+\bibitem{Canto13}
+L. F. Canto, M. S. Hussein,
+\emph{Scattering Theory of Molecules, Atoms and Nuclei}
+World Scientific Publishing Co.,
+2013
+
+
+\end{thebibliography}
+
+\subsection{The Glauber Approximation}
+As we already stated before, when the wavelength of the incident particle is short compared to the interaction region we can use a semiclassical approach. An approximation like this is justified since the average trajectory differs little from the classical one. This also allows us to use classically well know phenomena such as diffraction patterns in optics to deduce structure information from nuclei. \\ \\
+\noindent
+A first naive interpretation can be made by considering diffraction from a black disk, where \emph{black} means that any photon (or other incident particle) is completely absorbed. We can discern characteristic features like a large, forward diffraction peak and the appearance of minima and maxima in the diffraction pattern. The first minimum lies approximately at an angle $\theta_{min} \approx \lambda/2R_0$ with $R_0$ the radius of the disk. This shows of course that if we know the wavelength we can calculate the radius. The analogy in nuclear scattering physics is known as \emph{Fraunhofer diffraction}. This approximation can be derived from the eikonal approximation when the effects of the Coulomb field can be neglected \cite{Satchler80}. \\ \\
+\noindent
+We can improve the amount of information we can collect by making a second approximation: instead of considering the nucleus as a black disk we assume it to be \emph{grey}. As we can recall from our discussion of the eikonal approximation, in the cylindrical coordinate system 
+\begin{equation}
+	\mathbf{r} = \mathbf{b} + z\mathbf{\hat{n}},
+\end{equation}
+the shadow of a grey scatterer will not be uniformly black but instead its transmission will be a function of $\mathbf{b}$. In the black disk approximation the total wave function behind the scatterer is zero so $\psi(\mathbf{r}) = \psi(\mathbf{b})$. For a grey scatterer it is assumed that the total wave function behind the scatterer in the shadow plane is modified by a multiplicative factor \cite{Henley06}
+
+\begin{equation}\label{MultiplicativeFactor}
+	\psi_k(\mathbf{b}) = e^{i\mathbf{k}\cdot \mathbf{b}} e^{i\mathbf{\chi}(k,\mathbf{b})}
+\end{equation}
+with $\mathbf{k}$ the incident wave vector chosen along the $z$-axis. This means the factor exp$(i\mathbf{k}\cdot\mathbf{b})$ is equal to $1$ but we will keep it here since it will prove to be convenient. We can understand this more clearly when looking at the optical analog: when a light wave passes through a medium with refraction index of refraction $n$ and thickness $d$ its electric vector is modified by a factor $\exp(i\chi)$ with $\chi = k(1-n)d$. If the index of refraction is complex, the imaginary part describes absorption of the wave. Recalling our formulation for the total wave function
+\begin{equation}
+	\psi_k(\mathbf{r}) = e^{i\mathbf{k}\cdot \mathbf{r}} + \psi_s(\mathbf{r})
+\end{equation}
+with $\psi_s$ the scattered wave function and exp($i\mathbf{k}\cdot \mathbf{r}) =$ exp($ikz)$. Converting to the cylindrical coordinate system and evaluating in the shadow plane $(z=0)$ we get
+\begin{equation}
+	\psi_k(\mathbf{r}) = \psi_k(\mathbf{b},z=0) = 1 + \psi_s(\mathbf{b}).
+\end{equation}
+This should be equal to \eqref{MultiplicativeFactor} so we get for $\psi_s$
+\begin{align}
+	\psi_s(\mathbf{b},z=0) &= e^{i\mathbf{k}\cdot \mathbf{b}} e^{i\mathbf{\chi}(k,\mathbf{b})} - e^{i\mathbf{k}\cdot\mathbf{b}}\\
+&= e^{i\mathbf{k}\cdot\mathbf{b}}\lbrack e^{i\mathbf{\chi}(k,\mathbf{b})} - 1 \rbrack.
+\end{align}
+The expression in between brackets is called the \emph{profile function} $\Gamma(\mathbf{b})$. For small scattering angles we can prove that the scattering amplitude is equal to
+\begin{equation}
+	f(\mathbf{q}) = \frac{ik}{2\pi} \int d^2 \mathbf{b} e^{i \mathbf{q}\cdot \mathbf{b}} \Gamma(\mathbf{b}).
+\end{equation}
+The scattering amplitude is the Fourier transform of the profile function.\\ \\
+Up to now we have only considered diffraction scattering from a single object. Our third and final approximation consists of taking into account the coherent scattering of a projectile from a target composed of several subunits like say, a nucleus made up of several nucleons. We reach back once more to optical diffraction where a wave passes through $n$ absorbers, each of them characterized by a certain phase $\chi_i$. The initial electric vector is then modified by a factor $\exp(i\chi_1)\exp(i\chi_2)\ldots\exp(i\chi_i) = \exp(i[\chi_1 + \chi_2 +\ldots + \chi_n])$. The phases of the different absorbers add.\\
+This forms the criterion for the \emph{Glauber approximation}: we assume the phases from individual scatterers in a compound system, such as a nucleus, also add. In a nucleus, the individual nucleons are located at a certain distance $s_i$ from the $z$-axis which is perpendicular to the shadow plane. Hence the distance that determines the profile function for each nucleon is no longer $b$ but $b-s_i$. The phase factor for the $i$th nucleon is then given by
+\begin{equation}
+	e^{i\chi_i} = 1 - \Gamma_i(\mathbf{b}-\mathbf{s}_i).
+\end{equation}
+The Glauber approximation tells us we can add the individual phases so the total phase factor becomes
+\begin{align}
+	e^{i\chi} &= e^{i\chi_1}e^{i\chi_2}\ldots e^{i\chi_A}\\
+	& = \underset{i=1}{\overset{A}\prod}[1-\Gamma_i(\mathbf{b}-\mathbf{s}_i)],
+\end{align}
+so the complete profile function for the composite scatterer becomes
+\begin{equation}
+	\Gamma(\mathbf{b}) = 1 - \underset{i=1}{\overset{A}\prod}[1-\Gamma_i(\mathbf{b}-\mathbf{s}_i)].
+\end{equation}
+This formula has a serious drawback: we assume the nucleons are located at fixed positions in the nucleus. This is of course a useless description for a quantummechanical system like a nucleus so we need to make one final adjustment. We can only define a probability distribution for the nucleons using the relevant wave functions
+\begin{equation}
+	\bra{f}\Gamma(\mathbf{b})\ket{i} = \int d\mathbf{x}_1\ldots d\mathbf{x}_A ~\psi^{\ast}_f(\mathbf{x}_1, \ldots ,\mathbf{x}_A)\Gamma(\mathbf{b}) \psi_i(\mathbf{x}_1, \ldots ,\mathbf{x}_A).
+\end{equation}
+The scattering amplitude then becomes
+\begin{equation}
+	f(\mathbf{q}) = \frac{ik}{2\pi} \int d^2\mathbf{b} e^{i\mathbf{q} \cdot \mathbf{b}} \bra{f}\Gamma(\mathbf{b})\ket{i}
+\end{equation}
+with an inverse which is
+\begin{equation}
+	\bra{f}\Gamma(\mathbf{b})\ket{i} = \frac{1}{2\pi ik} \int d^2 \mathbf{q}~ e^{-i\mathbf{q}\cdot \mathbf{b}} f(\mathbf{q}).
+\end{equation}
+\begin{thebibliography}{10}
+\bibitem{Satchler80}
+G. R. Satchler,
+\emph{Introduction to Nuclear Reactions},
+Macmillan Press Ltd.,
+1980.
+
+\bibitem{Henley06}
+E. Henley, A. Garcia,
+\emph{Subatomic Physics},
+World Scientific Publishing Co. Ltd.,
+2006.
+	
+\end{thebibliography}
+
+\end{document}
+
